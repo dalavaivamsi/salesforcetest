@@ -1,0 +1,25 @@
+<apex:page controller="AccountAdd">
+
+<apex:form >
+<apex:pageblock title="Account Details" id="block">
+
+<apex:outputLabel value="Select Account"/>&nbsp;
+<apex:selectList value="{!account}" multiselect="false" size="1">
+<apex:selectOptions value="{!Accountnames}"/>
+<apex:actionSupport event="onchange" reRender="block"/>
+
+</apex:selectList>
+<!--<apex:selectList size="1" value="{!account}" >
+<apex:selectOptions value="{!Accountnames }"/ >
+<apex:actionSupport event="onchange" reRender="block" />
+</apex:selectList>--> <br/>
+<br></br><br></br>
+
+<apex:pageBlockTable value="{!accNew}" var="acc">
+<apex:column value="{!acc.Name}"/>
+<apex:column value="{!acc.Phone}"/>
+</apex:pageBlockTable>
+
+</apex:pageblock>
+</apex:form>
+</apex:page>

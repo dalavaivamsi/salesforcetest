@@ -1,0 +1,18 @@
+<apex:page standardController="Account" recordSetVar="Account">
+<apex:form >
+<apex:pageblock Title="Account List Applet">
+<apex:pageblockTable value="{!Account}" var="a">
+<apex:column value="{!a.Name}"/>
+<apex:column value="{!a.Industry}"/>
+</apex:pageblockTable>
+<apex:panelGrid columns="5">
+<apex:commandLink action="{!first}">First</apex:commandlink>
+<apex:commandLink action="{!previous}" rendered="{!hasPrevious}">Previous</apex:commandlink> ||
+<apex:commandLink action="{!next}" rendered="{!hasNext}">Next</apex:commandlink>
+<apex:commandLink action="{!last}">Last</apex:commandlink>
+</apex:panelGrid>
+
+</apex:pageblock>
+
+</apex:form>
+</apex:page>

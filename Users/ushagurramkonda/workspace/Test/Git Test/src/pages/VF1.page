@@ -1,0 +1,7 @@
+<apex:page controller="CL1">
+
+{!method1}<br/>
+{!add}<br/>
+{!Multiple}
+  
+</apex:page>

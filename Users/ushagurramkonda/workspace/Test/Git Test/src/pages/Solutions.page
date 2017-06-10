@@ -1,0 +1,12 @@
+<apex:page controller="Solutions">
+<apex:image value="{!$Resource.Solutions}" width="1100" height="150"/>
+ <apex:pageBlock title="Cases">
+ <apex:pageBlockTable value="{!Cases1}" var="Case">
+ <apex:column value="{!Case.CaseNumber}"/>
+ <apex:column value="{!Case.Major__c}"/>
+ <apex:column value="{!Case.Minor__c}"/>
+ <apex:column value="{!Case.Issue__c}"/>
+ <apex:column value="{!Case.Mailbox__c}"/>
+  </apex:pageBlockTable>
+ </apex:pageBlock>
+</apex:page>

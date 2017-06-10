@@ -1,0 +1,7 @@
+<apex:page controller="MyCustomLookupController" id="Page" tabstyle="Contact">
+
+<apex:form >
+    <apex:inputField id="UserId" value="{!contact.AccountId}"  />
+    </apex:form>
+
+</apex:page>

@@ -1,0 +1,24 @@
+<Apex:page standardController="Account" sidebar="false">
+<apex:form >
+<apex:pageBlock >
+<apex:pageBlockButtons >
+<apex:commandButton action="{!Save}" value="Save Account"/>
+<apex:commandButton action="{!QuickSave}" value="Quick Save"/>
+</apex:pageBlockButtons>
+<apex:pageBlockSection title="Opp Info 1" columns="3">
+<apex:inputField value="{!Account.Name}"/>
+<apex:inputField value="{!Account.AccountNumber}"/>
+<apex:inputField value="{!Account.AnnualRevenue}"/>
+<apex:inputField value="{!Account.Ownership}"/>
+</apex:pageBlockSection>
+<apex:pageBlockSection Title="Opp Info 2" columns="2">
+<apex:inputField value="{!Account.Name}"/>
+<apex:inputField value="{!Account.AccountNumber}"/>
+<apex:inputField value="{!Account.AnnualRevenue}"/>
+<apex:inputField value="{!Account.Ownership}"/>
+
+</apex:pageBlockSection>
+</apex:pageBlock>
+</apex:form>
+
+</Apex:page>

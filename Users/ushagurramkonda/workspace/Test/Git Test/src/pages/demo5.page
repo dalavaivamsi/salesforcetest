@@ -1,0 +1,19 @@
+<apex:page controller="Demo5">
+  <apex:form >
+  <apex:pageblock >
+  <apex:pageBlockSection >
+  <apex:pageBlockTable value="{!Results}" var="a">
+  <apex:column headerValue="Last Name" style="Blue">
+  <apex:outputLink value="https://advisehr-dev-ed--c.ap4.visual.force.com/apex/ContactCustomVF?Id={!a.Id}">{!a.FirstName}</apex:outputLink>
+  </apex:column>
+  <apex:column value="{!a.LastName}"/>
+  <apex:column value="{!a.FirstName}"/>
+  
+  </apex:pageBlockTable>
+  
+  
+  </apex:pageBlockSection>
+  
+  </apex:pageblock>  
+  </apex:form>
+</apex:page>

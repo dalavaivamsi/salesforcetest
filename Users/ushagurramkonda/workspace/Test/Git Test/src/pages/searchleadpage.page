@@ -1,0 +1,24 @@
+<apex:page controller="Searchclass">
+<apex:form >
+<apex:pageBlock id="block">
+<apex:pageBlockSection >
+<apex:pageBlockSectionItem >
+
+<apex:outputLabel for="SerchLead"></apex:outputLabel>
+<apex:panelGroup >
+<apex:inputtext id="searchtext" value="{!serachtext}"/>
+
+<apex:CommandButton value="Go" action="{!dosearch}" status="status" rerender="block"/>
+<apex:actionStatus startText="Please wait....." Id="status"/>
+</apex:panelGroup>
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+
+<apex:pageBlockTable value="{!results}" var="r" rendered="{!NOT(ISNULL(results))}">
+<apex:column value="{!r.Name}"/>
+<apex:column value="{!r.Phone}"/>
+<apex:column value="{!r.Email}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

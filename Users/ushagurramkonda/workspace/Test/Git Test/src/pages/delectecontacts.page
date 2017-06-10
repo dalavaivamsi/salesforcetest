@@ -1,0 +1,17 @@
+<apex:page controller="Deletedemo">
+ <apex:form >
+ <apex:pageblock >
+<apex:pageBlockSection >
+ <apex:pageblockTable value="{!b}" var="a">
+ <apex:column headerValue="Delete Link">
+ <apex:commandLink value="Delete" action="{!SuperDelete}">
+ <apex:param assignTo="{!aId}" name="aId" value="{!a.id}"/>
+ </apex:commandLink>
+ </apex:column>
+ <apex:column value="{!a.LastName}"/>
+ 
+ </apex:pageblockTable>
+</apex:pageBlockSection>
+ </apex:pageblock>
+ </apex:form>
+</apex:page>

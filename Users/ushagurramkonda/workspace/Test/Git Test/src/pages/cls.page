@@ -1,0 +1,10 @@
+<apex:page controller="MMICLS">
+<apex:image value="{!$Resource.Resource}" width="1000" height="100"/><apex:detail relatedList="false" />
+ <apex:pageBlock ><b> MMI's</b><apex:form ><apex:commandButton value="Edit" action="!edit"/></apex:form>
+  <apex:pageblockTable value="{!MMI}" Var="MMI__C">
+ <apex:column value="{!MMI__C.Major__c}"/>
+ <apex:column value="{!MMI__C.Minor__c}"/>
+ <apex:column value="{!MMI__C.Issue__c}"/>
+ <apex:column value="{!MMI__C.Organization__c}"/>
+ </apex:pageblockTable></apex:pageBlock>
+</apex:page>

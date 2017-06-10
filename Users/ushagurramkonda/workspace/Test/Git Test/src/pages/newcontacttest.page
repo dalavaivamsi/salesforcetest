@@ -1,0 +1,18 @@
+<apex:page standardController="Contact" recordSetVar="Table">
+<apex:form >
+<apex:pageBlock title="Contactstest">
+<apex:pageblockButtons >
+<apex:commandButton value="delete" action="{!Save}"/>
+</apex:pageblockButtons>
+
+<apex:pageblocktable value="{!Table}" var="a">
+<apex:column value="{!a.LastName}" />
+
+</apex:pageblocktable>
+
+
+</apex:pageBlock>
+
+</apex:form>
+ 
+</apex:page>

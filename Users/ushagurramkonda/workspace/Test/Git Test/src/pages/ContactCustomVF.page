@@ -1,0 +1,7 @@
+<apex:page standardController="Contact">
+<apex:detail relatedList="False" />
+<apex:relatedList list="Cases"/>
+<apex:relatedList list="Opportunities" rendered="{!Contact.LeadSource=='Web'}" />
+<apex:relatedList list="TestScenario__r" rendered="{!Contact.LeadSource=='Other'}" />
+
+</apex:page>

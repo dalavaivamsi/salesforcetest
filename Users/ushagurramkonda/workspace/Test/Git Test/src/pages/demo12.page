@@ -1,0 +1,44 @@
+<apex:page controller="one" action="{!save}">
+
+    <apex:form >
+
+        <apex:pageBlock id="one">
+
+            <apex:pageBlockTable value="{!accs}" var="a">
+
+                <apex:column value="{!a.id}"/>
+
+                <apex:column value="{!a.name}"/>
+
+                <apex:column >
+
+                    <apex:commandButton value="click" action="{!save}" reRender="two">
+
+                    <apex:param name="accountId" value="{!a.id}" assignTo="{!accid}"/>
+
+                    </apex:commandButton>
+
+                </apex:column>
+
+            </apex:pageBlockTable>
+
+            </apex:pageBlock>
+
+            <apex:pageBlock id="two">
+
+            <apex:pageBlockSection >
+
+        <apex:pageBlockSectionItem >
+        <apex:detail relatedList="True" rerender="Contact"/>
+
+              ID:{!accid}
+
+        </apex:pageBlockSectionItem>
+
+    </apex:pageBlockSection>
+
+        </apex:pageBlock>
+
+     </apex:form>
+
+</apex:page>

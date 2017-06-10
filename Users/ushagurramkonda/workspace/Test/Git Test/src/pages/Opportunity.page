@@ -1,0 +1,15 @@
+<apex:page controller="OPPCLS">
+<apex:image value="{!$Resource.Opportunity}" width="1100" height="150"/>
+<apex:form ><apex:pageBlock title="Opportunity">
+                <apex:pageBlockButtons >
+                 <apex:commandButton value="save" action="{!save}"/>
+            </apex:pageBlockButtons>
+   <apex:pageBlockSection columns="4">
+     <apex:pageblockTable value="{!Opp}" var="Opportunity">
+     
+     <apex:column value="{!Opportunity.name}"/>
+           
+          </apex:pageblockTable> 
+          </apex:pageBlockSection>
+   </apex:pageBlock></apex:form>
+</apex:page>

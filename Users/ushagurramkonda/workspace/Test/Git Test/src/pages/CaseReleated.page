@@ -1,0 +1,21 @@
+<apex:page standardController="Case" recordSetVar="Case">
+<apex:form >
+<apex:pageBlock title="Case">
+<apex:pageBlockButtons >
+<apex:commandButton value="Save" action="{!Save}"/>
+<apex:commandButton value="New" action="https://advisehr-dev-ed.my.salesforce.com/setup/ui/recordtypeselect.jsp?ent=Case&retURL=%2F500%2Fo&save_new_url=%2F500%2Fe%3FretURL%3D%252F500%252Fo"/>
+</apex:pageBlockButtons>
+<apex:pageBlockSection >
+<apex:pageBlockSectionItem >
+<apex:pageMessage severity="Hello">
+
+</apex:pageMessage>
+
+</apex:pageBlockSectionItem>
+</apex:pageBlockSection>
+
+</apex:pageBlock>
+</apex:form>
+
+
+</apex:page>

@@ -1,0 +1,24 @@
+<apex:page controller="getMMI">
+<apex:form >
+<apex:pageBlock >
+<apex:pageblockSection >
+<apex:pageBlockTable value="{!getMMI}" var="a">
+<apex:column headerValue="MMI ID"/>
+<apex:commandLink value="delete" action="{!deleterec}"/>
+<apex:param name="aId" value="{!a.id}" assignTo="{!aid}"/>
+<apex:column />
+<apex:column value="{!a.Major__c}" headerValue="Major"/>
+<apex:column value="{!a.Id}" headerValue="Id"/>
+
+
+</apex:pageBlockTable>
+
+
+
+</apex:pageblockSection>
+
+
+</apex:pageBlock>
+
+</apex:form>
+</apex:page>

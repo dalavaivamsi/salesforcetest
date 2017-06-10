@@ -1,0 +1,7 @@
+<apex:page >
+
+Hello..! This is my First Page.
+
+<p><b>Logged in User is : {!$User.FirstName}</b> </p>
+  
+</apex:page>

@@ -1,0 +1,19 @@
+<apex:page sidebar="false" standardController="Account">
+    <apex:pageBlock >  <apex:form >
+                     <apex:commandButton value="Google" action="www.google.com"/> 
+                      <apex:commandButton value="Vamsi" action="https://advisehr-dev-ed.my.salesforce.com/500/o"/>
+                      
+        </apex:form></apex:pageBlock><apex:pageBlock title="Vamsi">
+      <apex:pageBlockTable value="{!account.Contacts}" var="contact">
+
+         <apex:column value="{!contact.Name}"/>
+
+         <apex:column value="{!contact.MailingCity}"/>
+
+         <apex:column value="{!contact.Phone}"/>
+
+      </apex:pageBlockTable>
+</apex:pageBlock>
+    
+   
+       </apex:page>

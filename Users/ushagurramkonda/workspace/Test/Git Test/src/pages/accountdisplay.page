@@ -1,0 +1,3 @@
+<apex:page >
+<c:myfirstcomponent record="Account"></c:myfirstcomponent>
+</apex:page>
