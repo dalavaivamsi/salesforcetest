@@ -1,0 +1,14 @@
+<apex:page standardController="Account" extensions="OpportunityFilter">
+    <apex:form >
+        <apex:selectList value="{!regionValue}" size="1">
+           <apex:selectOptions value="{!regionOptions}"/> 
+        </apex:selectList>
+        <apex:commandButton value="Update Opportunities" action="{!updateFilteredOpportunities}"/>
+    </apex:form>
+    
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!filteredOpportunities}" var="opportunity">
+            <apex:column value="{!opportunity.name}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,25 @@
+<apex:page Controller="Deletecases">
+ <apex:form >
+ <apex:pageBlock >
+ <apex:pageBlockSection >
+ <apex:pageblockTable value="{!Getcases}" var="a">
+ <apex:column headerValue="Action Common"/>
+ <apex:commandLink value="delete" action="{!deleteallrec}"/>
+ <apex:param name="aId" value="{!a.Id}" assignTo="{!aId}"/>
+ <apex:commandLink />
+ <apex:column />
+     
+ <apex:column value="{!a.CaseNumber}" headerValue="Casenumber1"/>
+ <apex:column value="{!a.Major__c}"  headerValue="Major1"/>
+ <apex:column value="{!a.Minor__c}" headerValue="Minor1"/>
+ <apex:column value="{!a.Issue__c}"  headerValue="Issue1"/>
+ 
+ 
+ 
+ </apex:pageblockTable>
+
+ </apex:pageBlockSection>
+ 
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

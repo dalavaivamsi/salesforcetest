@@ -1,0 +1,9 @@
+<apex:page controller="Vf2">
+<apex:form >
+<apex:pageBlock >
+<apex:dataTable value="{!L}" var="a">
+<apex:column value="{!a.Name}"/>
+</apex:dataTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

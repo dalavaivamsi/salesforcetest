@@ -1,0 +1,4 @@
+<apex:page StandardController="Contact">
+<apex:detail relatedList="True"/>
+<apex:relatedList list="Cases" />
+</apex:page>

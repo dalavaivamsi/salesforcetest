@@ -1,0 +1,82 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" docType="html-5.0" Controller="AccountDetailCtr" applyBodyTag="False" applyHtmlTag="False">
+<head>
+  <title>Salesforce Demo</title>
+  <apex:slds /> 
+  <script>
+      function CreateAcc()
+      {
+          var accName=document.getElementById('account-name').value;
+          if(accName!='')
+          {
+              createAccount(accName);
+              
+          }   
+          else
+              alert('Please Eneter account name');
+      }
+      
+  </script>
+</head>
+<body class="slds-scope">
+   
+   
+    <!-- CREATE NEW ACCOUNT FORM -->
+    <apex:form styleClass="slds-form--stacked" id="add-account-form">
+        <!-- BOXED AREA -->
+        <apex:actionFunction name="createAccount" action="{!createAccount}" reRender="ren">
+            <apex:param name="accName" value=""/>
+        </apex:actionFunction>
+        
+        <apex:outputPanel id="ren">
+            <fieldset class="slds-box slds-theme--default slds-container--small">
+    
+                <legend id="newaccountform" class="slds-text-heading--medium slds-p-vertical--medium">Add a new account</legend>
+    
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="account-name">Name</label>
+                    <div class="slds-form-element__control">
+                        <input id="account-name" class="slds-input" type="text" placeholder="New account"/>
+                    </div>
+                </div>
+                <a class="slds-button slds-button--brand slds-m-top--medium" type="submit" onclick="CreateAcc()">Create Account</a>
+                
+            </fieldset>
+          
+        <!-- / BOXED AREA -->
+    
+        <!-- CREATE NEW ACCOUNT FORM -->
+    
+    
+        <br/><br/>
+            
+            <table class="slds-table slds-table--bordered slds-table--cell-buffer">
+                <thead>
+                    <tr class="slds-text-title--caps">
+                        
+                        <th scope="col">
+                            <div class="slds-truncate" title="Account Name">Account Name</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Close Date">Annual Revenue</div>
+                        </th>
+                        
+                    </tr>
+                </thead>
+                <tbody>
+                    <apex:repeat value="{!lstAcc}" var="acc">
+                        <tr>
+                            <th scope="row" data-label="Account Name">
+                                <div class="slds-truncate" title="Cloudhub"><a href="javascript:void(0);">{!acc.Name}</a></div>
+                            </th>
+                            <td data-label="Annual Revenue">
+                                <div class="slds-truncate" title="Cloudhub">{!acc.AnnualRevenue}</div>
+                            </td>
+                        </tr>
+                    </apex:repeat>
+                 </tbody>
+            </table>
+        
+        </apex:outputPanel>
+    </apex:form>  
+</body>
+</apex:page>

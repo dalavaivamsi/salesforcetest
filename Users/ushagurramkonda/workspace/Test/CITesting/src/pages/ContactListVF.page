@@ -1,0 +1,22 @@
+<apex:page standardcontroller="Contact" recordSetVar="Table">
+
+
+<apex:form >
+<apex:pageblock >
+<apex:commandButton action="{!save}" value="Save"/>
+<apex:pageBlockTable value="{!Table}" var="a">
+<apex:column value="{!a.LastName}"/>
+<apex:column value="{!a.FirstName}"/>
+<apex:column value="{!a.Email}"/>
+<apex:column value="{!a.Account.Name}"/>
+<apex:column >
+<apex:inputfield value="{!a.Account.Name}"/>
+</apex:column>
+<apex:column >
+<apex:outputLink value="https://advisehr-dev-ed--c.ap4.visual.force.com/apex/ContactCustomVF?Id={!a.Id}">{!a.LastName}</apex:outputLink>
+</apex:column>
+
+</apex:pageBlockTable>
+</apex:pageblock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,8 @@
+<apex:page standardController="Case">
+
+<apex:form >
+
+  <apex:inputField value="{!case.OwnerId}" id="searchtext"/><apex:commandButton value="Fetch records"/>
+    </apex:form>
+
+</apex:page>

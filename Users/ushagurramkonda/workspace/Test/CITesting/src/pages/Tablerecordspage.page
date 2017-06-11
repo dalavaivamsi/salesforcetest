@@ -1,0 +1,14 @@
+<apex:page standardController="Account" recordSetVar="table">
+<apex:form >
+<apex:pageBlock title="Account records">
+
+<apex:datatable value="{!table}" var="r">
+<apex:column Value="{!r.Name}"/>
+<apex:column Value="{!r.Industry}"/>
+<apex:column Value="{!r.TYpe}"/>
+<apex:column Value="{!r.Phone}"/>
+
+</apex:datatable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

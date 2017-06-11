@@ -1,0 +1,16 @@
+<apex:page controller="Demo4s">
+  <apex:form >
+  <apex:pageBlock >
+  <apex:pageBlockSection >
+  <apex:pageBlockTable value="{!Result}" var="a">
+  <apex:column value="{!a.LastName}"/>
+  
+  </apex:pageBlockTable>
+  
+  </apex:pageBlockSection>
+  
+  
+  </apex:pageBlock>
+  
+  </apex:form>
+</apex:page>

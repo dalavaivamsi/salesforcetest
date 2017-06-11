@@ -1,0 +1,21 @@
+<apex:page controller="GetCase">
+
+    <apex:form >
+     
+        <apex:commandButton value="Search" action="{!doSearch}"/>
+
+    </apex:form>
+<apex:form >
+    <apex:pageBlock >
+
+        <apex:pageblockTable value="{!olist}" var="eachRecord">
+            <apex:column value="{!eachRecord.Owner.Name}"/>
+            <apex:column value="{!eachRecord.id}"/>
+
+            <apex:column value="{!eachRecord.CaseNumber}"/>
+
+        </apex:pageblockTable>
+
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

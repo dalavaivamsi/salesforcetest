@@ -1,0 +1,5 @@
+<apex:page StandardController="Case"> 
+<apex:form >
+<apex:inputField value="{!Case.OwnerId}"/>
+</apex:form>
+</apex:page>

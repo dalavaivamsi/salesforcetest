@@ -1,0 +1,23 @@
+<apex:page controller="DeleteController">
+ <apex:form >
+  <apex:pageBlock >
+   <apex:pageBlockSection >
+    <apex:pageBlockTable value="{!records}" var="r">
+     
+    <apex:column headerValue="Action">
+     <apex:commandLink value="Delete" action="{!deleterec}">
+     <apex:param name="rId" value="{!r.Id}" assignTo="{!rId}"/>
+     </apex:commandLink>
+     </apex:column>
+     
+
+     <apex:column headerValue="AccountName" value="{!r.Name}"/>
+     <apex:column headerValue="Industry" value="{!r.Industry}"/>
+     <apex:column headerValue="Type" value="{!r.Type}"/>
+     <apex:column headerValue="Site" value="{!r.site}"/>
+ 
+    </apex:pageBlockTable>
+   </apex:pageBlockSection>
+  </apex:pageBlock>
+ </apex:form>
+</apex:page>

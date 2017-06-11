@@ -1,0 +1,17 @@
+<apex:page controller="mycontacts" showHeader="true" sidebar="false">
+<apex:image value="{!$Resource.Contacts}"/><apex:form >
+<apex:pageblock title="Contacts">
+<apex:pageBlockButtons ><apex:commandButton value="save" action="{!save}"/></apex:pageBlockButtons>
+<apex:pageBlockTable value="{!contacts}" var="contact">
+<apex:column headerValue="Contacts" >
+<apex:inputField value="{!Contact.Name}"/>
+</apex:column>
+<apex:column headerValue="Emails" >
+<apex:inputField value="{!Contact.Email}"/>
+</apex:column>
+</apex:pageBlockTable>
+
+</apex:pageblock>
+</apex:form>
+
+</apex:page>

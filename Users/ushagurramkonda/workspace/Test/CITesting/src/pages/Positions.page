@@ -1,0 +1,6 @@
+<apex:page >
+   <apex:pageBlock > Welcome<apex:form > <apex:commandButton action="https://ap4.salesforce.com/001/o" value="Vamsi" id="theButton"/> </apex:form>
+ new  </apex:pageBlock>
+   
+
+</apex:page>

@@ -1,0 +1,7 @@
+<apex:page standardController="MMI__c">
+
+
+
+<apex:detail relatedList="{!MMI__c.Name}"/>
+
+</apex:page>

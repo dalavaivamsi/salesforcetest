@@ -1,0 +1,13 @@
+<apex:page standardController="Contact" recordSetVar="Table">
+<style>
+
+  .fontstyle{Color : Blue}
+  </style>
+  
+ <apex:pageBlock >
+ <apex:outputText value="{!Table}" styleclass="fontstyle"> </apex:outputText>
+ 
+ 
+ </apex:pageBlock>
+
+</apex:page>

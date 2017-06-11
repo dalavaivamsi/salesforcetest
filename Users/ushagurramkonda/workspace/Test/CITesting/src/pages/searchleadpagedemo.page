@@ -1,0 +1,16 @@
+<apex:page standardController="Account" recordSetVar="Table">
+  <apex:form >
+  
+  <apex:pageBlock >
+  <apex:inputText />
+  <apex:commandButton value="Find"/>
+  </apex:pageBlock>
+  <apex:pageBlock >
+ <apex:pageBlockTable value="{!Table}" var="a">
+ <apex:column value="{!a.Name}"/>
+ <apex:column Value="{!a.Type}"/>
+ </apex:pageBlockTable>
+  </apex:pageBlock>
+    
+  </apex:form>
+</apex:page>

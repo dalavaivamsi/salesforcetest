@@ -1,0 +1,17 @@
+<apex:page standardController="Case" extensions="CasesFilter">
+    <apex:form >
+        <apex:selectList value="{!regionValue}" size="1">
+           <apex:selectOptions value="{!regionOptions}"/> 
+           <apex:actionSupport event="onchange" reRender="block" />
+        </apex:selectList>
+        <apex:commandButton value="Fetch Cases by Month" action="{!updateFilteredOpportunities}"/>
+    </apex:form>
+    
+    <apex:pageBlock >
+        <apex:pageBlockTable value="{!filteredCases}" var="Case">
+            <apex:column value="{!Case.CaseNumber}"/>
+            <apex:column value="{!Case.Created_Month__c}"/>
+            <apex:column value="{!Case.Createddate}"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

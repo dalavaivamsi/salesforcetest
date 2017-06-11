@@ -1,0 +1,9 @@
+<apex:page standardController="Account" sidebar="false">
+
+<apex:pageBlock >
+I am viewing the account:<b> {!Account.name}</b>
+</apex:pageBlock>
+
+<apex:detail relatedList="false"/>
+
+</apex:page>

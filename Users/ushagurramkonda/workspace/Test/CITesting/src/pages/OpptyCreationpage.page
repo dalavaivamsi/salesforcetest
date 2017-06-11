@@ -1,0 +1,26 @@
+<apex:page standardController="Opportunity" sidebar="false">
+<apex:form >
+<apex:pageBlock >
+
+<apex:pageBlockButtons >
+<apex:commandButton action="{!Save}" value="Save Oppty"/>
+</apex:pageBlockButtons>
+
+<apex:pageBlockSection title="Opportunity Info1" collapsible="false">
+<apex:inputField value="{!Opportunity.Name}"/>
+<apex:inputField value="{!Opportunity.StageName}"/>
+<apex:inputField value="{!Opportunity.Type}"/>
+<apex:inputField value="{!Opportunity.Amount}"/>
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Opportunity Info2" collapsible="false">
+<apex:inputField value="{!Opportunity.Description}"/>
+<apex:inputField value="{!Opportunity.CloseDate}"/>
+<apex:inputField value="{!Opportunity.Money__c}"/>
+<apex:inputField value="{!Opportunity.LeadSource}"/>
+</apex:pageBlockSection>
+
+
+</apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,19 @@
+<apex:page controller="ContactsDemo1">
+<table>
+table.dashboardtable tr:nth-child(even)
+table.dashboardtable tr:nth-child(odd)
+</table>
+<apex:stylesheet value="{!$Resource.customCSS}" />
+<apex:form >
+
+<apex:pageBlock >
+<apex:pageBlockTable value="{!L}" var="a">
+
+<apex:column value="{!a.LastName}"/>
+
+</apex:pageBlockTable>
+
+</apex:pageBlock>
+
+</apex:form>
+</apex:page>

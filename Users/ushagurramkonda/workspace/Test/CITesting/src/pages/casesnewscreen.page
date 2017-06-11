@@ -1,0 +1,11 @@
+<apex:page standardController="Case" recordSetVar="table">
+<apex:form >
+<apex:pageblock title="Case Records">
+<apex:pageBlock >
+<apex:pageBlockTable value="{!table}" var="r" rows="2">
+<apex:column value="{!r.CaseNumber}"/>
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:pageblock>
+ </apex:form>
+</apex:page>
